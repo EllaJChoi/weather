@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="R0W-AY-zRd" userLabel="Hour View" customClass="HourView" customModule="weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-Ua-UxX">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="130"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBd-aB-3mW">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ms6-Kq-sA1">
+                            <rect key="frame" x="0.0" y="45" width="60" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="4xc-Qi-Da8"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yON-NI-Tz2">
+                            <rect key="frame" x="0.0" y="95" width="60" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Ms6-Kq-sA1" firstAttribute="centerX" secondItem="jQb-Ua-UxX" secondAttribute="centerX" id="3Ax-mz-V8K"/>
+                        <constraint firstItem="Ms6-Kq-sA1" firstAttribute="centerY" secondItem="jQb-Ua-UxX" secondAttribute="centerY" id="8Rn-p1-JUZ"/>
+                        <constraint firstItem="tBd-aB-3mW" firstAttribute="centerX" secondItem="jQb-Ua-UxX" secondAttribute="centerX" id="QZC-ra-E1d"/>
+                        <constraint firstItem="yON-NI-Tz2" firstAttribute="centerX" secondItem="jQb-Ua-UxX" secondAttribute="centerX" id="Xnm-SF-cH5"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="aIu-oM-gv3"/>
+            <constraints>
+                <constraint firstItem="jQb-Ua-UxX" firstAttribute="bottom" secondItem="aIu-oM-gv3" secondAttribute="bottom" id="5gh-dV-HYs"/>
+                <constraint firstAttribute="trailing" secondItem="jQb-Ua-UxX" secondAttribute="trailing" id="N2e-ze-jUc"/>
+                <constraint firstItem="jQb-Ua-UxX" firstAttribute="leading" secondItem="aIu-oM-gv3" secondAttribute="leading" id="NPZ-fI-2Ab"/>
+                <constraint firstItem="jQb-Ua-UxX" firstAttribute="top" secondItem="R0W-AY-zRd" secondAttribute="top" id="uUT-Wa-wnQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="temperatureLabel" destination="yON-NI-Tz2" id="mzU-2b-vym"/>
+                <outlet property="timeLabel" destination="tBd-aB-3mW" id="Se3-Ok-DhK"/>
+                <outlet property="weatherImage" destination="Ms6-Kq-sA1" id="Drc-4k-DsT"/>
+            </connections>
+            <point key="canvasLocation" x="10.144927536231885" y="8.0357142857142847"/>
+        </view>
+    </objects>
+</document>
